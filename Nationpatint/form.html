@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Quora Help</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+</head>
+<style>
+.pop-content {
+
+	height: auto;
+
+	width: 200px;
+
+	background: #000;
+
+	color: #fff;
+
+	position: fixed;
+
+	bottom: 60px;
+
+	right: 20px;
+
+	display: none;
+
+}
+
+button {
+
+	width: 200px;
+
+	height: auto;
+
+	padding: 10px;
+
+	background: #000;
+
+	font-weight: bold;
+
+	color: #eee;
+
+	text-align: center;
+
+	border: 0;
+
+	position: fixed;
+
+	bottom: 20px;
+
+	right: 20px;
+
+}
+</style>
+
+<body>
+
+	<div class="pop-content">
+
+		<form>
+
+			<label for="name">Name:</label><br>
+
+			<input type="text" name="name"><br>
+
+			<label for="email">Email:</label><br>
+
+			<input type="email" name="email"><br>
+
+			<input type="submit" name="submit" value="Submit">
+
+		</form>
+
+	</div>
+
+	<button>Show/Hide</button>
+
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>

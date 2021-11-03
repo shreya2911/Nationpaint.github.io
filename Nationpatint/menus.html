@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  background-image: url('house2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size:60%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color:Grey; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+
+
+.cc-contactpop { 
+  background-color:#f18e92;
+  color:#fff;
+  width:350px;
+  bottom: 0;
+  right: 50px;
+}
+.cc-contactpop h3 {
+  border-radius: 0px 0px 0px 0px;
+  text-align:left;
+  color:#fff;
+  text-shadow:none;
+  font-size:16px;
+  font-weight:600;
+  background-color:#eb6166;
+  margin:0;
+  padding:15px;
+  cursor:pointer;
+}
+.cc-contactpop h3 span {
+    font-style: oblique;
+}
+.cc-contactpop p {
+  text-align:center;
+  padding:10px 15px;
+}
+.cc-contactpop i {
+	position: absolute;
+	top: 0px;
+        right:0px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 29px;
+	padding: 15px;
+	cursor: pointer;
+	background: #f18e92;
+}
+.cc-contactpop input {
+  font-family: "PT Sans",sans-serif;
+  font-size: 0.875em;	
+  width: 100%;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  border: solid 0px #eb6166;
+  border-bottom: none;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+.fixed {
+  position: fixed;
+}
+#top-address {position: top-right;
+    margin-top: 0px;
+    margin-left: 1000px;}
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/20092/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
+
+</style>
+
+
+</head>
+<body>
+<h2><center><b>Nation paints Services</b></center></h2>
+<div id="top-address"><h3><a href="tel:942-322-6370"><i class="fa fa-phone"></i>9423226370</a><br>
+<a href = "vikrampatil1782@gmail.com"><i class="fa fa-fw fa-envelope"></i>vikrampatil1782@gmail.com</a>
+<a href="whatsapp://send?text=Hello World!&phone=+919423226370"><i class="fa fa-whatsapp fa-2x"></i>Ping me on WhatsApp</a>
+</h3></div>
+
+
+
+ <br> <center> <h2> 
+<marquee width="100%" direction="left" height="100px">
+On-time. On budget. Guaranteed to last..We will paint your dreams into reality..Giving shining futures to your home..Master painters for your home...
+</marquee></h2>
+<div class="navbar">
+  <a href="home.html">Home<i class="fa fa-fw fa-home"></i></a>
+  <div class="subnav">
+    <button class="subnavbtn">About</button>
+    <div class="subnav-content">
+      <a href="company.html">Company</a>
+      <a href="about.html">Experienced Workers</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <a href="new.html">Services</a>
+  </div> 
+<div class="subnav">
+<a href="contact.html">contact<i class="fa fa-fw fa-envelope"></i></a>
+    <div class="subnav-content">
+
+
+</div>
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+	// let's Hide Items
+	$( ".cc-contactpop form").hide();
+	$( ".cc-contactpop i").hide(); 
+	$( ".cc-contactpop p").hide();
+	// Show on elements ".slideDown"
+	$( ".cc-contactpop" ).click(function() {
+		$( ".cc-contactpop form").slideDown(500)
+		$( ".cc-contactpop p").slideDown(500)
+		$( ".cc-contactpop i").slideDown(500)
+	});
+	// Close Hidden Part
+	$( ".cc-contactpop i" ).click(function() {
+		$(this).slideUp(500)
+			$( ".cc-contactpop p").slideUp(500)
+			$( ".cc-contactpop form").slideUp(500)
+		return false
+	});
+ 
+});
+</script>
+<div class="cc-contactpop fixed">
+      <div class="renseignement">
+      
+      <p>If you have any question/query, please fill out the form below and we will get back to you as soon as possible.</p>
+    </div>
+    <form id="myform">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your name"/>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="E-mail"/>
+      </div>
+      <div class="form-group">
+        <input type="text" name="phone" placeholder="Phone number"/>
+      </div>
+      <div class="form-group">
+        <input type="text" name="pin" placeholder="PIN" maxlength="7" size="7"><br>
+      </div>
+      <button onclick="subform()">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

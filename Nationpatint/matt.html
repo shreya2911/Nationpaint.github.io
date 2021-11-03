@@ -1,0 +1,79 @@
+<html>
+<head>
+<style>
+body {
+  background-image: url('colours.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size:50%;
+  background-position:right;
+}
+</body>
+</style>
+<script type="text/javascript">
+        function DisplayPrice(price){
+            var val1 = 0;
+            for( i = 0; i < document.form1.price.length; i++ ){
+                if( document.form1.price[i].checked == true ){
+                    val1 = document.form1.price[i].value;
+                }
+            }
+
+            var val2 = 0;
+            for( i = 0; i < document.form2.price2.length; i++ ){
+                if( document.form2.price2[i].checked == true ){
+                    val2 = document.form2.price2[i].value;
+                }
+            }
+
+            var val3 = 0;
+            for( i = 0; i < document.form3.price3.length; i++ ){
+                if( document.form3.price3[i].checked == true ){
+                    val3 = document.form3.price3[i].value;
+                }
+            }
+
+            var sum=parseInt(val1) + parseInt(val2) + parseInt(val3);
+            document.getElementById('totalSum').value=sum;
+        }
+    </script>
+</head>
+<body>
+<h2>Royale Matt Price</h2><h4>as per you select coats of colour primer and putty</h4>
+    <h3>Colour:<br></h3>
+    <form name="form1" id="form1" runat="server">
+        <br>
+        <input id="rdo_1" type="radio" value="8" name="price" onclick="DisplayPrice(this.value);">1 coat colour
+        <br>
+        <input id="rdo_2" type="radio" value="16" name="price" onclick="DisplayPrice(this.value);">2 coat colour
+        <br>
+    </form>
+
+    <h3>Primer and Putty:<br></h3>
+    <form name="form2" id="form2" runat="server">
+        <br>
+        <input id="rdo_1" type="radio" value="2.5" name="price2" onclick="DisplayPrice(this.value);">1 coat primer+1 coat putty
+        <br>
+        <input id="rdo_2" type="radio" value="5" name="price2" onclick="DisplayPrice(this.value);">2 coat primer+2 coat putty
+        <br>
+        <input id="rdo_3" type="radio" value="4" name="price2" onclick="DisplayPrice(this.value);">1 coat primer+2 coat putty
+        <br>
+        <input id="rdo_4" type="radio" value="3.5" name="price2" onclick="DisplayPrice(this.value);">2 coat primer+1 coat putty
+        <br>
+    </form>
+
+   <h3>Packing and Sanding:<br></h3>
+      <form name="form3" id="form3" runat="server">
+          <br>
+          <input id="rdo_1" type="radio" value="3" name="price3" onclick="DisplayPrice(this.value);">packing+sanding
+          <br>
+          <input id="rdo_2" type="radio" value="1" name="price3" onclick="DisplayPrice(this.value);">paking
+          <br>
+          <input id="rdo_3" type="radio" value="2" name="price3" onclick="DisplayPrice(this.value);">sanding
+          <br>
+      </form>
+
+ <div><h1> Total price:  <input type="text" name="totalSum" id="totalSum" value="" size="4" readonly="readonly"></h1></div>
+
+
+</body>

@@ -1,0 +1,112 @@
+<html>
+<head>
+</head>
+<style>
+.cc-contactpop { 
+  background-color:#f18e92;
+  color:#fff;
+  width:350px;
+  bottom: 0;
+  right: 50px;
+  border-radius: 6px 6px 0px 0px;
+}
+.cc-contactpop h3 {
+  border-radius: 6px 6px 0px 0px;
+  text-align:left;
+  color:#fff;
+  text-shadow:none;
+  font-size:16px;
+  font-weight:600;
+  background-color:#eb6166;
+  margin:0;
+  padding:15px;
+  cursor:pointer;
+}
+.cc-contactpop h3 span {
+    font-style: oblique;
+}
+.cc-contactpop p {
+  text-align:center;
+  padding:10px 15px;
+}
+.cc-contactpop i {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 29px;
+	padding: 15px;
+	cursor: pointer;
+	background: #f18e92;
+}
+.cc-contactpop input {
+  font-family: "PT Sans",sans-serif;
+  font-size: 0.875em;	
+  width: 100%;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  border: solid 1px #eb6166;
+  border-bottom: none;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+.fixed {
+  position: fixed;
+}
+
+</style>
+<body>
+<script type="text/javascript">
+$( document ).ready(function() {
+	// let's Hide Items
+	$( ".cc-contactpop form").hide();
+	$( ".cc-contactpop i").hide(); 
+	$( ".cc-contactpop p").hide();
+	// Show on elements ".slideDown"
+	$( ".cc-contactpop" ).click(function() {
+		$( ".cc-contactpop form").slideDown(500)
+		$( ".cc-contactpop p").slideDown(500)
+		$( ".cc-contactpop i").slideDown(500)
+	});
+	// Close Hidden Part
+	$( ".cc-contactpop i" ).click(function() {
+		$(this).slideUp(500)
+			$( ".cc-contactpop p").slideUp(500)
+			$( ".cc-contactpop form").slideUp(500)
+		return false
+	});
+ 
+});
+</script>
+<div class="cc-contactpop fixed">
+      <div class="renseignement">
+      <i class="fa fa-times">X</i>
+      <p>If you’d like to send us feedback, want to be become an author or have any other question/query, please fill out the form below and we will get back to you as soon as possible. </p>
+    </div>
+    <form method="post">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your name"/>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="E-mail"/>
+      </div>
+      <div class="form-group">
+        <input type="text" name="phone" placeholder="Phone number"/>
+      </div>
+      <div class="form-group">
+        <input type="text" name="pin" placeholder="PIN" maxlength="4" size="4">
+      </div>
+      <div class="form-group">
+        <textarea id="message" type="text" placeholder="Message"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
